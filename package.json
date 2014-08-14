@@ -1,0 +1,21 @@
+{
+  "name": "nORM",
+  "version": "0.0.1",
+  "description": "A tool for using sql queries in javascript",
+  "main": "index.js",
+  "scripts": {
+    "test": "mocha test/test.js"
+  },
+  "keywords": [
+    "sql",
+    "database",
+    "postgres",
+    "mysql"
+  ],
+  "author": "Michael Fine <mfine15@gmail.com> (http://www.michaelfine.me/)",
+  "license": "BSD-2-Clause",
+  "dependencies": {
+    "should": "~4.0.4",
+    "path": "~0.4.9"
+  }
+}
