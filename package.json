@@ -1,5 +1,5 @@
 {
-  "name": "nORM",
+  "name": "Preql",
   "version": "0.0.1",
   "description": "A tool for using sql queries in javascript",
   "main": "index.js",
@@ -13,9 +13,11 @@
     "mysql"
   ],
   "author": "Michael Fine <mfine15@gmail.com> (http://www.michaelfine.me/)",
-  "license": "BSD-2-Clause",
+  "license": "MIT",
   "dependencies": {
-    "should": "~4.0.4",
     "path": "~0.4.9"
+  },
+  "devDependencies": {
+  	"should": "~4.0.4",
   }
 }

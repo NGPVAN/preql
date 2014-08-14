@@ -29,7 +29,7 @@ Then, in your javascript file, call preql and now it can be used as a regular ja
 	var preql = require('preql');
 	var pg = require('pg');
 	
-	var getPosts = require('./some/directory/get_posts.sql');
+	var getPosts = preql.makeQuery('./some/directory/get_posts.sql');
 	
 	getPosts(client.query.bind(client), function(err,result){
 		console.log(result);
@@ -54,16 +54,20 @@ Preql also allows you to require an entire directory of files, creating queries 
 		file.txt
 when you call
 	
-	makeQueries('./queries');
+	preql.makeQueries('./queries');
 	
 you'll receive an object with a ``getPosts`` and ``createPost`` function.
 
 ## Development ##
+To install: ``npm install preql``
 
 Presql uses mocha and should for tests, run ``npm test`` to run the test suite.
 
 ##Todo##
 * Allow for multiple queries per file
+
+_Written by Michael Fine_
+
 	
 	
 	

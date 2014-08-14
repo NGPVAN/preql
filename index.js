@@ -1,7 +1,5 @@
-var Promise = require('bluebird');
 var fs = require('fs');
 var path = require('path');
-var pg = require('pg');
 
 
 function makeFunction(query){
