@@ -18,6 +18,6 @@
     "path": "~0.4.9"
   },
   "devDependencies": {
-  	"should": "~4.0.4",
+  	"should": "~4.0.4"
   }
 }
