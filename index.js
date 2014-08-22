@@ -41,7 +41,6 @@ module.exports = {
     });
 
 		var contents = files.map(function(fileName){
-      console.log(that.makeQueries)
       if(dirs[fileName]){
         return that.makeQueries(path.join(dir,fileName));
       }
