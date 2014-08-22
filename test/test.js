@@ -11,7 +11,7 @@ describe('nORM', function(){
 		});
 		done();
 	});
-	
+
 	it('should pass parameters to the query function', function(done){
 		function query(text,obj){
 			obj.should.have.property('a',1)
@@ -23,7 +23,7 @@ describe('nORM', function(){
 	it('should pass callback to the query function', function(done){
 		sample(function(text,fn){
 			fn.should.be.type('function');
-		},console.log);
+		},function(){});
 		done();
 	});
 
@@ -42,5 +42,14 @@ describe('nORM', function(){
 			done();
 		});
 
+    it('should recursively generate queries to an arbitrary depth', function(done){
+      queries.User.create(function(query){
+        query.should.equal('INSERT INTO users VALUES ($name,$email);');
+      });
+      queries.User.Nested.select(function(query){
+        query.should.equal('SELECT * FROM users');
+      });
+      done();
+    });
 	});
 })
